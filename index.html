@@ -1,28 +1,23 @@
 ---
 layout: default
-title: Strefano Oldeman's github
-tagline: Success is trying allot and being stubborn
+title: Strefano Oldeman's pages
+tagline: essays and brain dumps
 ---
 
     <div id="index-page" class="main-content">
         <h3 style="display:hidden">Articles</h2>
         <ol id="articles">
+        {% for post in site.posts %}
             <li>
-            <h4>Just the way it is</h4>
-            <span class="date">date</span>
-            <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et arcu mauris, vel dictum lorem. Sed iaculis lobortis leo, et posuere dui dictum et. Pellentesque eget tellus ut mi pulvinar condimentum. Nulla mollis purus quis nisi laoreet non porttitor nulla congue. Etiam a metus mauris, vitae venenatis lorem. Etiam tempor semper lectus, sit amet accumsan dolor vehicula in. Vivamus et ligula in velit iaculis convallis vel non lectus. Phasellus commodo turpis non tellus consectetur ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            </p></li>
-            <li>
-            <h4>Why cofee is good and should be used wisely</h4>
-            <span class="date">date</span><p>
-Suspendisse euismod tincidunt rutrum. Pellentesque in molestie dolor. Cras nibh mi, hendrerit in dapibus ut, interdum dictum tellus. Fusce ac arcu ut augue aliquet ullamcorper a sit amet est. Nunc tincidunt tellus non leo aliquam tempus. Aliquam varius massa id elit semper bibendum. Donec tempor, quam quis semper volutpat, leo nunc vestibulum neque, dictum dignissim metus mauris nec lectus. Duis ullamcorper, mi eu aliquam porttitor, dui enim luctus nibh, sed aliquam sem leo condimentum massa. Duis cursus interdum turpis quis interdum. In volutpat semper pulvinar.
-            </p></li>
-
-            <li>
-            <h4>Why cofee is good and should be used wisely</h4>
-            <span class="date">date</span><p>
-Aenean dolor lacus, fermentum et rhoncus sed, rhoncus ut est. Integer rutrum enim ut dui tempor vitae fermentum arcu aliquam. Nulla ornare commodo massa, vel tempor dolor iaculis eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer malesuada nisl a ipsum fermentum porttitor. Nam tincidunt, magna at aliquet accumsan, est felis viverra tortor, vel accumsan mi mi vitae enim. Curabitur ultricies viverra libero, eu ultrices felis dictum non. Morbi in bibendum nisi. Ut aliquam, diam sed mattis cursus, ante felis pretium metus, vel luctus orci leo ut urna. Ut condimentum elementum diam, et sollicitudin orci vehicula id. Sed sollicitudin enim eget metus congue pulvinar.
-            </p></li>
+                <h4>{{ post.title }}</h4>
+                <span class="date"> {{ post.data}} </span>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <p>{{ post.summary }}</p>
+            </li>
+        {% else %}
+            <li class="nopost">
+                <p>Oeps.. no single post has been published yet.</p>
+            </li>
+        {% endfor %}
         </ol>
     </div>
