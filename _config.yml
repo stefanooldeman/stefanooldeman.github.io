@@ -1,12 +1,6 @@
 safe:        false
-auto:        true
 server:      false
-server_port: 4000
-baseurl:    /
-url: http://local.stefano.oldeman.github.com:400
-
-source:      .
-destination: ./_site
+url: http://stefanooldeman.github.io
 
 app:
     media_path: /assets
