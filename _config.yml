@@ -7,9 +7,8 @@ url: http://local.stefano.oldeman.github.com:400
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
 
 app:
     media_path: /assets
-    minified: ""
-    version: 0.1
+    minified: ".min"
+    version: 0.2
