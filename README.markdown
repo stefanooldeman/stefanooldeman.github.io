@@ -45,3 +45,5 @@ All articles / posts will use another layout.
 http://stefanooldeman.github.com/
 https://github.com/mojombo/jekyll/blob/master/README.textile
 https://github.com/adinardi/google-closure-compiler
+https://closure-compiler.appspot.com/home
+http://css.github.io/csso/csso.html

@@ -1,34 +1,41 @@
 <!doctype html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Stefano Oldeman's {% if page.type == 'post' %} posts, {{page.title}} {% else %} {{page.type}} {% endif %}</title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="stefano oldeman, stefanooldeman" />
-    <title>Stefano Oldeman's / {% if page.type == 'post' %} {{page.title}} {% else %} {{page.type}} {% endif %}</title>
     <link rel="stylesheet" href="{{site.app.media_path}}/css/style{{site.app.minified}}.css?{{site.app.version}}" type="text/css" media="all" />
-</head>
-<body>
-    <div id="container">
-        <h1>
-            <a href="/">Stefano Oldeman's {{page.type}}</a>
-            <sub>
-                {% if page.type == 'post' %}
-                    {{page.title}}
-                {% endif %}
-            </sub>
-        </h1>
-        <ul id="menu">
-            <li><a href="/about.html">About</a></li>
-            <li>
-                <form>
-                    <input type="search" id="st-search-input" class="st-search-input" placeholder="Search" />
-                </form>
-                <div id="st-results-container"></div>
-            </li>
-        </ul>
+    <link rel="stylesheet" href="{{site.app.media_path}}/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+      <h1>Stefano Oldeman's {{page.type}}</h1>
+
+        <p class="view">Jump to: <a href="/">index</a>, <a
+            href="/about.html">about</a> <small> or <a href="https://github.com/stefanooldeman">view my GitHub</a></small></p>
+
+      </header>
+
+      <section>
+        {% if page.type != 'post' %} <h3>{{page.title}}</h3> {% endif %}
 
         {{ content }}
+      </section>
+      <footer>
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
+    <script type="text/javascript" src="{{site.app.media_path}}/js/scale.fix.{{site.app.minified}}.js?{{site.app.version}}" charset="utf-8"></script>
     <script type="text/javascript" src="{{site.app.media_path}}/js/main{{site.app.minified}}.js?{{site.app.version}}" charset="utf-8"></script>
-</body>
+    
+  </body>
 </html>
