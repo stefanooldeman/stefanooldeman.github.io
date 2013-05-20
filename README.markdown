@@ -2,6 +2,8 @@
 ## Jekyll Tour
 
 The purpose of this document is to get up to speed with maintaining the site. I tend to forget all these things when I haven't touched any of this for a while
+http://jekyllrb.com/
+https://github.com/mojombo/jekyll/wiki
 
 ### Install
 

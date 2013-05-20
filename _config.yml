@@ -11,5 +11,5 @@ plugins:     ./_plugins
 
 app:
     media_path: /assets
-    minified: ".min"
+    minified: ""
     version: 0.1
